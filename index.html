@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Organico Gold – Café de Origen Único | Guaduas, Cundinamarca</title>
+  <meta name="description" content="Café Organico Gold, cultivado a mano en la Vereda El Palbarcito, Guaduas, Cundinamarca. Arábica de origen único, sostenible y audaz. Envíos a Bogotá y toda Colombia." />
+  <meta name="theme-color" content="#1A0F05" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Organico Gold – Café Arábica de Origen Único" />
+  <meta property="og:description" content="El café que las montañas de Cundinamarca guardan para los que saben. Single origin, cosecha manual, tostión artesanal." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1200&q=80" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ═══ ANUNCIO ═══ -->
+<div class="announcement-bar" role="banner">
+  <p>🚀 <strong>ENVÍO GRATIS</strong> a Bogotá en pedidos mayores a $80.000 COP &nbsp;·&nbsp; ☕ Molido al pedir &nbsp;·&nbsp; 📦 Despacho en 24–48h</p>
+</div>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+  <div class="nav-container">
+    <a href="#inicio" class="nav-logo" aria-label="Organico Gold inicio">
+      <img src="images/logo.png" alt="Organico Gold Logo" class="nav-logo-img" />
+      <div class="logo-text">
+        <span class="logo-main">ORGANICO GOLD</span>
+        <span class="logo-sub">Highest Quality Arabica</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#origen">Nuestro Origen</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#testimonios">Reseñas</a></li>
+      <li><a href="#tienda" class="nav-cta">☕ Comprar Ahora</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" onclick="Cart.toggle()" aria-label="Ver carrito">
+        <span aria-hidden="true">🛒</span>
+        <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="UI.toggleMenu()" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="inicio" aria-label="Inicio">
+  <div class="hero-img" role="img" aria-label="Plantación de café en las montañas de Cundinamarca"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-logo-wrap">
+      <img src="images/logo.png" alt="Organico Gold" class="hero-logo" />
+    </div>
+    <div class="hero-badge">✦ Origen Único · Vereda El Palbarcito, Guaduas</div>
+    <h1 class="hero-title">
+      El café que las<br/>
+      <span class="gold-text">montañas de Cundinamarca</span><br/>
+      guardan para los que saben
+    </h1>
+    <p class="hero-subtitle">
+      Arábica de altitud, cultivado sin químicos, tostado artesanalmente.
+      Cada sorbo es la historia de una vereda que despertó con aroma a café.
+    </p>
+    <div class="hero-actions">
+      <a href="#tienda" class="btn btn--primary btn--large">☕ Quiero mi café ahora</a>
+      <a href="#origen" class="btn btn--ghost btn--large">Descubrir el origen</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><span aria-hidden="true">🌿</span><span>100% Orgánico</span></div>
+      <div class="trust-item"><span aria-hidden="true">🏔️</span><span>Alta Altitud</span></div>
+      <div class="trust-item"><span aria-hidden="true">🤲</span><span>Cosecha Manual</span></div>
+      <div class="trust-item"><span aria-hidden="true">🚚</span><span>Envío a Colombia</span></div>
+    </div>
+  </div>
+  <a href="#origen" class="hero-scroll" aria-label="Ir a siguiente sección">
+    <span>Descubre más</span>
+    <div class="scroll-arrow" aria-hidden="true">↓</div>
+  </a>
+</section>
+
+<!-- ═══ IMPACTO ═══ -->
+<section class="impact-strip" aria-label="Cifras clave">
+  <div class="impact-container">
+    <div class="impact-item"><strong>+500</strong><span>Familias cafeteras</span></div>
+    <div class="impact-divider" aria-hidden="true">|</div>
+    <div class="impact-item"><strong>1.800m</strong><span>Sobre el nivel del mar</span></div>
+    <div class="impact-divider" aria-hidden="true">|</div>
+    <div class="impact-item"><strong>100%</strong><span>Arabica grano selecto</span></div>
+    <div class="impact-divider" aria-hidden="true">|</div>
+    <div class="impact-item"><strong>Est. 2021</strong><span>Tradición nueva, raíces antiguas</span></div>
+  </div>
+</section>
+
+<!-- ═══ ORIGEN ═══ -->
+<section class="origin section" id="origen" aria-label="Nuestro origen">
+  <div class="container">
+    <div class="origin-grid">
+
+      <div class="origin-visual">
+        <div class="origin-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1611073615830-9b16fd395779?w=800&q=80"
+            alt="Cafetal en las montañas de Cundinamarca, Colombia"
+            class="origin-img"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="origin-badge-float">
+            <span aria-hidden="true">🗺️</span>
+            <div>
+              <strong>El Palbarcito</strong>
+              <small>Guaduas, Cundinamarca</small>
+            </div>
+          </div>
+        </div>
+        <div class="origin-img-secondary-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80"
+            alt="Granos de café rojo maduros listos para cosechar"
+            class="origin-img-secondary"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+
+      <div class="origin-content">
+        <div class="section-tag">Nuestro Origen</div>
+        <h2 class="section-title">Donde el río Magdalena<br/>abraza las nubes</h2>
+        <p class="origin-lead">
+          En la Vereda El Palbarcito, enclavada entre las montañas de Guaduas, Cundinamarca,
+          crece el café que estás a punto de descubrir. A más de 1.800 metros, donde las noches son
+          frescas y las mañanas huelen a tierra mojada.
+        </p>
+        <p class="origin-body">
+          Este suelo volcánico, bañado por lluvias tropicales, produce granos de Arábica con una complejidad
+          aromática que los cafés de valle jamás lograrán imitar. <strong>Aquí no se apresura nada.</strong>
+          Cada cereza es escogida a mano cuando llega a su punto exacto de madurez.
+        </p>
+        <div class="origin-highlights">
+          <div class="highlight-card">
+            <span class="h-icon" aria-hidden="true">🌧️</span>
+            <h4>Microclima Único</h4>
+            <p>Lluvias constantes y temperatura ideal entre 18°C y 24°C todo el año</p>
+          </div>
+          <div class="highlight-card">
+            <span class="h-icon" aria-hidden="true">🌱</span>
+            <h4>Sin Agroquímicos</h4>
+            <p>Cultivado con fertilización orgánica y prácticas ancestrales campesinas</p>
+          </div>
+          <div class="highlight-card">
+            <span class="h-icon" aria-hidden="true">👨‍🌾</span>
+            <h4>Familias Locales</h4>
+            <p>Pagamos precio justo directamente al productor, sin intermediarios</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALERÍA ═══ -->
+<section class="gallery section" aria-label="Galería de café">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Del campo a tu taza</div>
+      <h2 class="section-title">El viaje del grano perfecto</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item gallery-item--tall">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80"
+             alt="Taza de café negro preparado con método pour-over"
+             loading="lazy" decoding="async" />
+        <div class="gallery-label">Preparación perfecta</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80"
+             alt="Granos de café en proceso de tostión artesanal"
+             loading="lazy" decoding="async" />
+        <div class="gallery-label">Tostión artesanal</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80"
+             alt="Espresso recién servido con crema dorada"
+             loading="lazy" decoding="async" />
+        <div class="gallery-label">Espresso perfecto</div>
+      </div>
+      <div class="gallery-item gallery-item--wide">
+        <img src="https://images.unsplash.com/photo-1500353391678-d7b57979d6d2?w=900&q=80"
+             alt="Granos de café verde y tostado, comparación"
+             loading="lazy" decoding="async" />
+        <div class="gallery-label">Grano seleccionado a mano</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1521302200778-33500795e128?w=600&q=80"
+             alt="Agricultor colombiano recogiendo cerezas de café"
+             loading="lazy" decoding="async" />
+        <div class="gallery-label">Cosecha manual</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TIENDA ═══ -->
+<section class="shop section" id="tienda" aria-label="Tienda">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Nuestra Tienda</div>
+      <h2 class="section-title">Un solo café. Perfecto.</h2>
+      <p class="section-subtitle">No necesitamos variedad cuando la calidad no tiene competencia</p>
+    </div>
+
+    <div class="product-showcase">
+      <!-- Imagen producto -->
+      <div class="product-images">
+        <div class="product-main-img">
+          <img
+            src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&q=80"
+            alt="Bolsa premium de café Organico Gold de 500 gramos"
+            class="product-photo"
+            id="productPhoto"
+            loading="eager"
+          />
+          <div class="product-photo-overlay">
+            <div class="product-photo-badges">
+              <span class="badge badge--green">Orgánico</span>
+              <span class="badge badge--gold">Premium</span>
+              <span class="badge badge--brown">Single Origin</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-thumbnails" role="list" aria-label="Vistas del producto">
+          <button class="thumb active" onclick="Product.selectView(this, 0)" role="listitem" aria-label="Vista principal">
+            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=120&q=70" alt="Bolsa de café" />
+          </button>
+          <button class="thumb" onclick="Product.selectView(this, 1)" role="listitem" aria-label="Granos de café">
+            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=120&q=70" alt="Cerezas de café" />
+          </button>
+          <button class="thumb" onclick="Product.selectView(this, 2)" role="listitem" aria-label="Café preparado">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=120&q=70" alt="Café listo" />
+          </button>
+          <button class="thumb" onclick="Product.selectView(this, 3)" role="listitem" aria-label="Proceso de tostión">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=120&q=70" alt="Tostión" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Detalles -->
+      <div class="product-details">
+        <div class="product-tag">☕ Café de Especialidad · Single Origin · Guaduas, Cundinamarca</div>
+        <h3 class="product-name" id="productName">Organico Gold – Molido Espresso</h3>
+
+        <div class="product-rating" aria-label="Calificación: 4.9 de 5 estrellas">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <span class="rating-text">4.9/5 · Más de 120 reseñas verificadas</span>
+        </div>
+
+        <div class="flavor-profile">
+          <h4>Perfil de sabor</h4>
+          <div class="flavor-tags" role="list">
+            <span class="flavor-tag" role="listitem">🍫 Chocolate Oscuro</span>
+            <span class="flavor-tag" role="listitem">🍊 Cítrico Suave</span>
+            <span class="flavor-tag" role="listitem">🥜 Avellana</span>
+            <span class="flavor-tag" role="listitem">🍯 Miel de Caña</span>
+          </div>
+        </div>
+
+        <div class="product-specs">
+          <div class="spec-row"><span class="spec-label">Variedad</span><span class="spec-value">Arabica Castillo / Colombia</span></div>
+          <div class="spec-row"><span class="spec-label">Altitud</span><span class="spec-value">1.700 – 1.900 m.s.n.m.</span></div>
+          <div class="spec-row"><span class="spec-label">Proceso</span><span class="spec-value">Lavado / Honey</span></div>
+          <div class="spec-row"><span class="spec-label">Tostión</span><span class="spec-value">Media · Acidez brillante y dulzor</span></div>
+          <div class="spec-row"><span class="spec-label">Origen</span><span class="spec-value">Vereda El Palbarcito, Guaduas</span></div>
+        </div>
+
+        <div class="option-group">
+          <h4>Tipo de molienda</h4>
+          <div class="option-buttons" id="grindOptions" role="group" aria-label="Tipo de molienda">
+            <button class="option-btn active" onclick="Product.selectGrind(this, 'Molido Espresso')">Espresso</button>
+            <button class="option-btn" onclick="Product.selectGrind(this, 'Molido Filtro')">Filtro / V60</button>
+            <button class="option-btn" onclick="Product.selectGrind(this, 'Molido French Press')">French Press</button>
+            <button class="option-btn" onclick="Product.selectGrind(this, 'Grano Entero')">Grano Entero</button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <h4>Tamaño</h4>
+          <div class="option-buttons" id="sizeOptions" role="group" aria-label="Tamaño de bolsa">
+            <button class="option-btn" onclick="Product.selectSize(this, '250g', 35000)">250g<span class="size-price">$35.000</span></button>
+            <button class="option-btn active" onclick="Product.selectSize(this, '500g', 65000)">500g<span class="size-price">$65.000</span></button>
+            <button class="option-btn" onclick="Product.selectSize(this, '1kg', 120000)">1kg<span class="size-price">$120.000</span></button>
+          </div>
+        </div>
+
+        <div class="price-section">
+          <div class="price-display">
+            <span class="price-current" id="priceDisplay" aria-live="polite">$65.000 COP</span>
+            <span class="price-original" id="priceOriginal">$80.000</span>
+            <span class="price-discount" id="priceDiscount">-19%</span>
+          </div>
+          <div class="price-note">🚚 Envío gratis a Bogotá · Llega en 24–48h</div>
+        </div>
+
+        <div class="qty-add">
+          <div class="qty-control" role="group" aria-label="Cantidad">
+            <button onclick="Product.changeQty(-1)" aria-label="Reducir cantidad">−</button>
+            <span id="qtyDisplay" aria-live="polite" aria-atomic="true">1</span>
+            <button onclick="Product.changeQty(1)" aria-label="Aumentar cantidad">+</button>
+          </div>
+          <button class="btn btn--dark btn--full" onclick="Cart.add()">
+            🛒 Agregar al carrito
+          </button>
+        </div>
+
+        <button class="btn btn--primary btn--full btn--xl" onclick="Checkout.open()">
+          ⚡ COMPRAR AHORA – Pago Seguro
+        </button>
+
+        <div class="product-trust">
+          <div class="p-trust-item"><span aria-hidden="true">🔒</span> Pago 100% seguro</div>
+          <div class="p-trust-item"><span aria-hidden="true">↩️</span> Devolución en 7 días</div>
+          <div class="p-trust-item"><span aria-hidden="true">📦</span> Molido al pedir</div>
+        </div>
+
+        <div class="payment-icons" aria-label="Métodos de pago aceptados">
+          <span class="pay-icon">💳 Nequi</span>
+          <span class="pay-icon">📱 Daviplata</span>
+          <span class="pay-icon">🏦 PSE</span>
+          <span class="pay-icon">💰 Contraentrega</span>
+          <span class="pay-icon">💳 Tarjeta</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ POR QUÉ ═══ -->
+<section class="why-us section" aria-label="Por qué elegirnos">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">¿Por qué Organico Gold?</div>
+      <h2 class="section-title">No es solo café.<br/>Es una decisión.</h2>
+    </div>
+    <div class="why-grid">
+      <article class="why-card">
+        <div class="why-icon" aria-hidden="true">🏔️</div>
+        <h3>Altitud que se nota</h3>
+        <p>A más de 1.800 metros, el grano madura lento, concentra azúcares naturales y desarrolla una acidez brillante incomparable.</p>
+      </article>
+      <article class="why-card">
+        <div class="why-icon" aria-hidden="true">🤲</div>
+        <h3>Cosecha grano a grano</h3>
+        <p>Solo cerezas en su punto exacto. Sin máquinas, sin prisa. Con el respeto que merece cada planta y cada familia recolectora.</p>
+      </article>
+      <article class="why-card">
+        <div class="why-icon" aria-hidden="true">⚗️</div>
+        <h3>Tostión artesanal</h3>
+        <p>Tostamos en pequeños lotes para garantizar frescura máxima. Tu café llega tostado hace menos de 72 horas.</p>
+      </article>
+      <article class="why-card">
+        <div class="why-icon" aria-hidden="true">🌿</div>
+        <h3>Sin químicos, sin mentiras</h3>
+        <p>Cero pesticidas, cero herbicidas. Solo la fertilidad natural de la tierra cundinamarquesa y el conocimiento campesino heredado.</p>
+      </article>
+      <article class="why-card">
+        <div class="why-icon" aria-hidden="true">💚</div>
+        <h3>Comercio justo real</h3>
+        <p>Pagamos más del 30% sobre precio de mercado directamente al productor. Tu compra transforma una vereda entera.</p>
+      </article>
+      <article class="why-card">
+        <div class="why-icon" aria-hidden="true">📦</div>
+        <h3>Fresco o no lo enviamos</h3>
+        <p>Molemos al recibir tu pedido. Empacamos al vacío con válvula desgasificadora. La frescura no es negociable.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESO ═══ -->
+<section class="process section" id="proceso" aria-label="Proceso de producción">
+  <div class="container">
+    <div class="section-header light">
+      <div class="section-tag">Del campo a tu taza</div>
+      <h2 class="section-title">Cada paso importa</h2>
+    </div>
+    <div class="process-steps">
+      <article class="process-step">
+        <div class="step-img-wrap">
+          <img src="https://images.unsplash.com/photo-1589396575653-c09c794ff6a6?w=400&q=75"
+               alt="Planta de café en crecimiento" loading="lazy" decoding="async" />
+        </div>
+        <div class="step-number" aria-hidden="true">01</div>
+        <span class="step-icon" aria-hidden="true">🌱</span>
+        <h3>Cultivo orgánico</h3>
+        <p>Semillas seleccionadas en suelo vivo, sin agroquímicos</p>
+      </article>
+      <div class="process-arrow" aria-hidden="true">→</div>
+      <article class="process-step">
+        <div class="step-img-wrap">
+          <img src="https://images.unsplash.com/photo-1521302200778-33500795e128?w=400&q=75"
+               alt="Recolección de cerezas de café" loading="lazy" decoding="async" />
+        </div>
+        <div class="step-number" aria-hidden="true">02</div>
+        <span class="step-icon" aria-hidden="true">🍒</span>
+        <h3>Cosecha selectiva</h3>
+        <p>Solo cerezas rojas maduras, recolectadas a mano</p>
+      </article>
+      <div class="process-arrow" aria-hidden="true">→</div>
+      <article class="process-step">
+        <div class="step-img-wrap">
+          <img src="https://images.unsplash.com/photo-1500353391678-d7b57979d6d2?w=400&q=75"
+               alt="Proceso de beneficio húmedo del café" loading="lazy" decoding="async" />
+        </div>
+        <div class="step-number" aria-hidden="true">03</div>
+        <span class="step-icon" aria-hidden="true">💧</span>
+        <h3>Proceso Honey</h3>
+        <p>Fermentación controlada que preserva azúcares naturales</p>
+      </article>
+      <div class="process-arrow" aria-hidden="true">→</div>
+      <article class="process-step">
+        <div class="step-img-wrap">
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&q=75"
+               alt="Tostión artesanal de granos de café" loading="lazy" decoding="async" />
+        </div>
+        <div class="step-number" aria-hidden="true">04</div>
+        <span class="step-icon" aria-hidden="true">🔥</span>
+        <h3>Tostión artesanal</h3>
+        <p>Lotes de máximo 5kg, perfil de tostión media</p>
+      </article>
+      <div class="process-arrow" aria-hidden="true">→</div>
+      <article class="process-step">
+        <div class="step-img-wrap">
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&q=75"
+               alt="Empaque sellado al vacío de café" loading="lazy" decoding="async" />
+        </div>
+        <div class="step-number" aria-hidden="true">05</div>
+        <span class="step-icon" aria-hidden="true">📦</span>
+        <h3>Empaque y envío</h3>
+        <p>Sellado al vacío, despachado en menos de 24 horas</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIOS ═══ -->
+<section class="testimonials section" id="testimonios" aria-label="Reseñas de clientes">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Lo que dicen nuestros clientes</div>
+      <h2 class="section-title">Ellos ya lo probaron.<br/>Ahora no pueden parar.</h2>
+    </div>
+    <div class="testimonials-grid">
+      <blockquote class="testimonial-card testimonial-card--featured">
+        <div class="t-stars" aria-label="5 estrellas">★★★★★</div>
+        <p>"Llevo 15 años tomando café de especialidad y este es de los mejores que he probado en Colombia. El chocolatoso con esa acidez cítrica... perfecto para mi V60 mañanero."</p>
+        <footer class="t-author">
+          <div class="t-avatar" aria-hidden="true">CG</div>
+          <div><strong>Carlos G.</strong><small>Barista · Bogotá, Chapinero</small></div>
+        </footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <div class="t-stars" aria-label="5 estrellas">★★★★★</div>
+        <p>"Me llegó en menos de 24 horas y el aroma al abrir la bolsa fue increíble. Calidad premium a precio justo."</p>
+        <footer class="t-author">
+          <div class="t-avatar" aria-hidden="true">MP</div>
+          <div><strong>María P.</strong><small>Emprendedora · Usaquén</small></div>
+        </footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <div class="t-stars" aria-label="5 estrellas">★★★★★</div>
+        <p>"Soy de Guaduas y saber que este café viene de El Palbarcito me llena de orgullo. La calidad es increíble."</p>
+        <footer class="t-author">
+          <div class="t-avatar" aria-hidden="true">JR</div>
+          <div><strong>Jorge R.</strong><small>Ingeniero · Suba</small></div>
+        </footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <div class="t-stars" aria-label="5 estrellas">★★★★★</div>
+        <p>"Lo pedí para regalar y terminé comprando 3 bolsas para mí. El grano entero es una maravilla para la cafetera italiana."</p>
+        <footer class="t-author">
+          <div class="t-avatar" aria-hidden="true">LV</div>
+          <div><strong>Luisa V.</strong><small>Diseñadora · La Candelaria</small></div>
+        </footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <div class="t-stars" aria-label="5 estrellas">★★★★★</div>
+        <p>"En nuestra cafetería buscábamos un single origin colombiano y no podríamos estar más felices. Los clientes lo piden por nombre."</p>
+        <footer class="t-author">
+          <div class="t-avatar" aria-hidden="true">AM</div>
+          <div><strong>Andrés M.</strong><small>Dueño Cafetería · Palermo</small></div>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SUSCRIPCIÓN ═══ -->
+<section class="subscription section" aria-label="Suscripción mensual">
+  <div class="container">
+    <div class="subscription-card">
+      <div class="sub-img-wrap">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80"
+             alt="Café preparado con amor cada mañana" loading="lazy" decoding="async" />
+      </div>
+      <div class="sub-content">
+        <span aria-hidden="true" class="sub-icon">☕</span>
+        <h2>¿Tu café, cada mes, sin pensarlo?</h2>
+        <p>Suscríbete y recibe tu Organico Gold fresco cada mes con <strong>15% de descuento permanente</strong>. Cancela cuando quieras.</p>
+        <div class="sub-benefits">
+          <div class="sub-benefit">✅ 15% OFF en cada envío</div>
+          <div class="sub-benefit">✅ Prioridad en lotes nuevos</div>
+          <div class="sub-benefit">✅ Envío gratis siempre</div>
+          <div class="sub-benefit">✅ Sin permanencia</div>
+        </div>
+        <button class="btn btn--primary" onclick="Cart.addSubscription()">Quiero suscribirme →</button>
+        <p class="sub-note">Ya son <strong>+200 suscriptores activos</strong> en Bogotá y Colombia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq section" id="faq" aria-label="Preguntas frecuentes">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Preguntas frecuentes</div>
+      <h2 class="section-title">Todo lo que necesitas saber</h2>
+    </div>
+    <div class="faq-list" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="UI.toggleFaq(this)" aria-expanded="false">
+          ¿Cuánto demora el envío a Bogotá?<span class="faq-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Despachamos en máximo 24 horas hábiles. En Bogotá recibes en 24–48h adicionales. Para otras ciudades, 2–5 días hábiles.</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="UI.toggleFaq(this)" aria-expanded="false">
+          ¿Cómo puedo pagar?<span class="faq-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Aceptamos Nequi, Daviplata, PSE, tarjetas Visa/Mastercard y pago contraentrega en Bogotá (costo adicional $5.000 COP).</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="UI.toggleFaq(this)" aria-expanded="false">
+          ¿El café llega fresco?<span class="faq-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>Sí, 100%. Molemos el mismo día que recibimos tu pedido. El empaque con válvula desgasificadora mantiene el café fresco 3–4 meses sin abrir.</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="UI.toggleFaq(this)" aria-expanded="false">
+          ¿Hacen envíos fuera de Bogotá?<span class="faq-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>¡Claro! Enviamos a toda Colombia. El costo varía según la ciudad. Pedidos mayores a $80.000 COP tienen envío gratis a Bogotá.</p>
+        </div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" onclick="UI.toggleFaq(this)" aria-expanded="false">
+          ¿Venden al por mayor para cafeterías?<span class="faq-arrow" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>¡Sí! Tenemos precios especiales para cafeterías y restaurantes. Escríbenos por WhatsApp y te enviamos el catálogo mayorista.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA FINAL ═══ -->
+<section class="final-cta" aria-label="Llamado a la acción">
+  <div class="final-cta-img" role="img" aria-label="Paisaje cafetero colombiano al amanecer"></div>
+  <div class="final-cta-overlay"></div>
+  <div class="container">
+    <div class="final-cta-content">
+      <div class="final-cta-tag">⏰ Lote limitado</div>
+      <h2>Tu mejor café está<br/><span class="gold-text">a un clic de distancia</span></h2>
+      <p>Más de 500 bogotanos ya empezaron su mañana con Organico Gold.<br/>¿Cuándo empiezas tú?</p>
+      <div class="urgency-bar" role="alert" aria-live="polite">
+        🔴 <strong>Stock limitado:</strong> Quedan <strong id="stockCount">47</strong> bolsas de este lote
+      </div>
+      <a href="#tienda" class="btn btn--primary btn--large btn--xl">☕ Comprar mi café ahora</a>
+      <div class="final-trust">
+        <span>🔒 Pago seguro</span>
+        <span>📦 Envío en 24h</span>
+        <span>✅ Satisfacción garantizada</span>
+        <span>🔄 Devolución fácil</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Organico Gold" class="footer-logo-img" />
+          <div>
+            <span class="logo-main small">ORGANICO GOLD</span>
+            <span class="logo-sub small">Modern Sustainability · Bold & Refined</span>
+          </div>
+        </div>
+        <p class="footer-desc">Café de origen único desde la Vereda El Palbarcito, Guaduas, Cundinamarca. Est. 2021.</p>
+        <nav class="social-links" aria-label="Redes sociales">
+          <a href="#" class="social-link">📷 Instagram</a>
+          <a href="#" class="social-link">👍 Facebook</a>
+          <a href="https://wa.me/573000000000" class="social-link" rel="noopener noreferrer" target="_blank">💬 WhatsApp</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Tienda</h4>
+        <ul>
+          <li><a href="#tienda">Café 250g – $35.000</a></li>
+          <li><a href="#tienda">Café 500g – $65.000</a></li>
+          <li><a href="#tienda">Café 1kg – $120.000</a></li>
+          <li><a href="#tienda">Suscripción mensual</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Información</h4>
+        <ul>
+          <li><a href="#origen">Nuestro origen</a></li>
+          <li><a href="#proceso">El proceso</a></li>
+          <li><a href="#testimonios">Reseñas</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <address>
+          <ul>
+            <li>📍 Vereda El Palbarcito, Guaduas, Cundinamarca</li>
+            <li>📧 <a href="mailto:contacto@organicogold.co">contacto@organicogold.co</a></li>
+            <li>📱 +57 300 000 0000</li>
+            <li>🕘 Lun–Vie: 8am–6pm</li>
+          </ul>
+        </address>
+        <a href="https://wa.me/573000000000" class="whatsapp-btn" rel="noopener noreferrer" target="_blank">
+          💬 Escríbenos por WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Organico Gold · Todos los derechos reservados · Guaduas, Cundinamarca, Colombia</p>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Devoluciones</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ CARRITO LATERAL ═══ -->
+<div class="cart-overlay" id="cartOverlay" onclick="Cart.toggle()" role="presentation"></div>
+<aside class="cart-sidebar" id="cartSidebar" aria-label="Carrito de compras" aria-hidden="true">
+  <div class="cart-header">
+    <h3>🛒 Tu carrito</h3>
+    <button class="cart-close" onclick="Cart.toggle()" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <span aria-hidden="true">☕</span>
+      <p>Tu carrito está vacío</p>
+      <a href="#tienda" onclick="Cart.toggle()">Ver productos →</a>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" hidden>
+    <div class="cart-total">
+      <span>Total:</span>
+      <strong id="cartTotal" aria-live="polite">$0 COP</strong>
+    </div>
+    <p class="cart-shipping-note">🚚 Envío gratis a Bogotá en pedidos +$80.000</p>
+    <button class="btn btn--primary btn--full" onclick="Checkout.open()">Ir al pago →</button>
+  </div>
+</aside>
+
+<!-- ═══ MODAL CHECKOUT ═══ -->
+<div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Formulario de pago" hidden>
+  <div class="modal">
+    <button class="modal-close" onclick="Checkout.close()" aria-label="Cerrar">✕</button>
+    <div class="modal-header">
+      <h3>☕ Completa tu pedido</h3>
+      <p>Café fresco desde El Palbarcito hasta tu puerta</p>
+    </div>
+    <form class="checkout-form" id="checkoutForm" onsubmit="Checkout.process(event)" novalidate>
+      <fieldset class="form-section">
+        <legend>📋 Datos de contacto</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Nombre completo *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Tu nombre completo"
+                   required minlength="3" maxlength="100" autocomplete="name" />
+            <span class="field-error" id="fullNameError" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono / WhatsApp *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+57 300 000 0000"
+                   required pattern="[\+\d\s\-]{7,15}" autocomplete="tel" />
+            <span class="field-error" id="phoneError" role="alert"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" placeholder="tu@correo.com"
+                 required maxlength="254" autocomplete="email" />
+          <span class="field-error" id="emailError" role="alert"></span>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend>📦 Dirección de entrega</legend>
+        <div class="form-group">
+          <label for="city">Ciudad *</label>
+          <select id="city" name="city" required onchange="Checkout.updateShipping()" autocomplete="address-level2">
+            <option value="">Selecciona tu ciudad</option>
+            <option value="bogota">Bogotá D.C.</option>
+            <option value="medellin">Medellín</option>
+            <option value="cali">Cali</option>
+            <option value="barranquilla">Barranquilla</option>
+            <option value="bucaramanga">Bucaramanga</option>
+            <option value="manizales">Manizales</option>
+            <option value="pereira">Pereira</option>
+            <option value="otra">Otra ciudad</option>
+          </select>
+          <span class="field-error" id="cityError" role="alert"></span>
+        </div>
+        <div class="form-group">
+          <label for="address">Dirección completa *</label>
+          <input type="text" id="address" name="address" placeholder="Calle 123 # 45-67, Barrio, Apt"
+                 required minlength="10" maxlength="200" autocomplete="street-address" />
+          <span class="field-error" id="addressError" role="alert"></span>
+        </div>
+        <div class="form-group">
+          <label for="notes">Notas de entrega</label>
+          <input type="text" id="notes" name="notes" placeholder="Ej: Torre 3, apto 402" maxlength="200" />
+        </div>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend>💳 Método de pago</legend>
+        <div class="payment-methods" role="radiogroup" aria-label="Método de pago">
+          <label class="payment-method">
+            <input type="radio" name="payment" value="nequi" checked />
+            <div class="pm-card"><span aria-hidden="true">📱</span><div><strong>Nequi</strong><small>Transferencia inmediata</small></div></div>
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="payment" value="daviplata" />
+            <div class="pm-card"><span aria-hidden="true">📲</span><div><strong>Daviplata</strong><small>Transferencia inmediata</small></div></div>
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="payment" value="pse" />
+            <div class="pm-card"><span aria-hidden="true">🏦</span><div><strong>PSE</strong><small>Débito bancario</small></div></div>
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="payment" value="tarjeta" />
+            <div class="pm-card"><span aria-hidden="true">💳</span><div><strong>Tarjeta</strong><small>Crédito o débito</small></div></div>
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="payment" value="contraentrega" />
+            <div class="pm-card"><span aria-hidden="true">💵</span><div><strong>Contraentrega</strong><small>Solo Bogotá (+$5.000)</small></div></div>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="order-summary" aria-label="Resumen del pedido">
+        <h4>📋 Resumen del pedido</h4>
+        <div id="orderSummaryItems"></div>
+        <div class="summary-row"><span>Subtotal</span><span id="summarySubtotal">$0</span></div>
+        <div class="summary-row"><span>Envío</span><span id="summaryShipping">Selecciona ciudad</span></div>
+        <div class="summary-row summary-row--total"><strong>Total</strong><strong id="summaryTotal" aria-live="polite">$0 COP</strong></div>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--full btn--xl" id="payBtn">
+        🔒 Confirmar y Pagar
+      </button>
+      <p class="checkout-note">Al confirmar aceptas nuestros <a href="#">Términos y Condiciones</a>. Pago 100% seguro.</p>
+    </form>
+  </div>
+</div>
+
+<!-- Modal éxito -->
+<div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-label="Pedido confirmado" hidden>
+  <div class="modal success-modal">
+    <div class="success-icon" aria-hidden="true">✅</div>
+    <h3>¡Pedido confirmado!</h3>
+    <p>Gracias por tu compra. Te enviaremos los detalles por WhatsApp y correo en los próximos minutos.</p>
+    <div class="success-steps" role="list">
+      <div class="s-step" role="listitem">1. Recibirás instrucciones de pago por WhatsApp</div>
+      <div class="s-step" role="listitem">2. Confirma tu pago y te mandamos el tracking</div>
+      <div class="s-step" role="listitem">3. Tu café llega fresco en 24–48 horas 🚀</div>
+    </div>
+    <button class="btn btn--primary" onclick="Checkout.closeSuccess()">Perfecto, gracias →</button>
+  </div>
+</div>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/573000000000?text=Hola!%20Quiero%20pedir%20café%20Organico%20Gold%20☕"
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp">
+  💬
+</a>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
