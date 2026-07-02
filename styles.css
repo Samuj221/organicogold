@@ -157,24 +157,30 @@ address { font-style:normal; }
 }
 .logo-og.small { width:36px; height:36px; font-size:12px; }
 
-/* Logo imagen real */
+/* ── Logo imagen real (quita fondo blanco con border-radius) ── */
 .nav-logo-img {
   width:44px; height:44px;
-  object-fit:contain;
-  filter:drop-shadow(0 2px 6px rgba(201,168,76,.4));
-  transition:transform var(--dur) var(--ease), filter var(--dur) var(--ease);
+  object-fit:cover;
+  object-position:center;
+  border-radius:50%;           /* recorta el cuadrado blanco → solo el medallón */
   flex-shrink:0;
+  box-shadow:0 0 0 2px rgba(201,168,76,.35);
+  transition:transform var(--dur) var(--ease),
+             box-shadow var(--dur) var(--ease);
 }
 .nav-logo:hover .nav-logo-img {
-  transform:rotate(8deg) scale(1.08);
-  filter:drop-shadow(0 4px 12px rgba(201,168,76,.6));
+  transform:rotate(6deg) scale(1.1);
+  box-shadow:0 0 0 3px rgba(201,168,76,.7),
+             0 4px 16px rgba(201,168,76,.4);
 }
 
 .footer-logo-img {
   width:52px; height:52px;
-  object-fit:contain;
-  filter:drop-shadow(0 2px 6px rgba(201,168,76,.3)) brightness(0.95);
+  object-fit:cover;
+  object-position:center;
+  border-radius:50%;
   flex-shrink:0;
+  box-shadow:0 0 0 2px rgba(201,168,76,.3);
 }
 
 /* Hero logo */
@@ -184,13 +190,18 @@ address { font-style:normal; }
   animation:logoFloat 4s ease-in-out infinite;
 }
 .hero-logo {
-  width:110px; height:110px;
-  object-fit:contain;
-  filter:drop-shadow(0 8px 24px rgba(201,168,76,.5));
+  width:130px; height:130px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:50%;           /* quita fondo blanco */
+  box-shadow:
+    0 0 0 3px rgba(201,168,76,.5),
+    0 0 0 8px rgba(201,168,76,.12),
+    0 12px 40px rgba(201,168,76,.4);
 }
 @keyframes logoFloat {
   0%,100% { transform:translateY(0) rotate(0deg); }
-  50%      { transform:translateY(-8px) rotate(2deg); }
+  50%      { transform:translateY(-10px) rotate(2deg); }
 }
 .logo-text      { display:flex; flex-direction:column; }
 .logo-main      { color:var(--gold); font-family:'Playfair Display',serif; font-weight:700; font-size:13px; letter-spacing:1.5px; }
