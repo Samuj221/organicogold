@@ -227,25 +227,40 @@
     <div class="product-showcase">
       <!-- Imagen producto -->
       <div class="product-images">
-        <div class="product-main-img">
-          <img
-            src="images/bolsa-producto.svg"
-            alt="Bolsa premium de café Organico Gold de 500 gramos"
-            class="product-photo"
-            id="productPhoto"
-            loading="eager"
-          />
-          <div class="product-photo-overlay">
-            <div class="product-photo-badges">
-              <span class="badge badge--green">Orgánico</span>
-              <span class="badge badge--gold">Premium</span>
-              <span class="badge badge--brown">Single Origin</span>
+        <!-- Mockup bolsa con logo real superpuesto -->
+        <div class="product-main-img" id="productMainImg">
+          <div class="bag-mockup" id="bagMockup">
+            <!-- Bolsa negra de fondo -->
+            <img
+              src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&q=85"
+              alt="Bolsa negra de café premium"
+              class="bag-base-img"
+              id="bagBaseImg"
+            />
+            <!-- Logo real superpuesto sobre la bolsa -->
+            <div class="bag-logo-overlay">
+              <img src="images/logo.png" alt="Organico Gold" class="bag-logo-on-bag" />
+              <div class="bag-brand-overlay">
+                <span class="bag-brand-name-text">ORGANICO GOLD</span>
+                <span class="bag-brand-sub-text">HIGHEST QUALITY ARABICA</span>
+                <span class="bag-brand-origin-text">Vereda El Palbarcito · Guaduas, Cundinamarca</span>
+              </div>
             </div>
+            <!-- Overlay oscuro que unifica la apariencia -->
+            <div class="bag-dark-overlay"></div>
+          </div>
+          <div class="product-photo-badges-abs">
+            <span class="badge badge--green">Orgánico</span>
+            <span class="badge badge--gold">Premium</span>
+            <span class="badge badge--brown">Single Origin</span>
           </div>
         </div>
         <div class="product-thumbnails" role="list" aria-label="Vistas del producto">
-          <button class="thumb active" onclick="Product.selectView(this, 0)" role="listitem" aria-label="Vista principal">
-            <img src="images/bolsa-producto.svg" alt="Bolsa de café" />
+          <button class="thumb active" onclick="Product.selectView(this, 0)" role="listitem" aria-label="Bolsa producto">
+            <div class="thumb-bag-mini">
+              <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=120&q=70" alt="Bolsa" />
+              <img src="images/logo.png" alt="" class="thumb-logo-mini" />
+            </div>
           </button>
           <button class="thumb" onclick="Product.selectView(this, 1)" role="listitem" aria-label="Granos de café">
             <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=120&q=70" alt="Cerezas de café" />
@@ -253,7 +268,7 @@
           <button class="thumb" onclick="Product.selectView(this, 2)" role="listitem" aria-label="Café preparado">
             <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=120&q=70" alt="Café listo" />
           </button>
-          <button class="thumb" onclick="Product.selectView(this, 3)" role="listitem" aria-label="Proceso de tostión">
+          <button class="thumb" onclick="Product.selectView(this, 3)" role="listitem" aria-label="Tostión">
             <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=120&q=70" alt="Tostión" />
           </button>
         </div>

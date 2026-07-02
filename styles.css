@@ -413,16 +413,102 @@ address { font-style:normal; }
   box-shadow:var(--shadow-lg);
   aspect-ratio:3/4;
 }
-.product-photo { width:100%; height:100%; object-fit:cover; transition:transform .5s var(--ease); }
-.product-main-img:hover .product-photo { transform:scale(1.04); }
 
-.product-photo-overlay {
-  position:absolute; inset:0;
-  background:linear-gradient(to top, rgba(26,15,5,.6) 0%, transparent 50%);
+/* ── Mockup bolsa con logo real ── */
+.bag-mockup {
+  position:relative; width:100%; height:100%;
 }
-.product-photo-badges {
-  position:absolute; bottom:20px; left:16px; right:16px;
-  display:flex; gap:8px; flex-wrap:wrap;
+
+.bag-base-img {
+  width:100%; height:100%;
+  object-fit:cover;
+  transition:transform .6s var(--ease);
+  filter:brightness(0.45) saturate(0.3);
+}
+.product-main-img:hover .bag-base-img { transform:scale(1.04); }
+
+/* Overlay oscuro para hacer la bolsa casi negra */
+.bag-dark-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(
+    160deg,
+    rgba(10,6,2,.55) 0%,
+    rgba(26,15,5,.3) 40%,
+    rgba(10,6,2,.6) 100%
+  );
+  pointer-events:none;
+}
+
+/* Logo + texto superpuesto centrado en la bolsa */
+.bag-logo-overlay {
+  position:absolute; inset:0;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:10px; padding:24px;
+  z-index:2;
+}
+
+.bag-logo-on-bag {
+  width:clamp(100px, 40%, 160px);
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 4px 20px rgba(201,168,76,.6))
+         drop-shadow(0 0 40px rgba(201,168,76,.25));
+  transition:transform .4s var(--ease), filter .4s var(--ease);
+}
+.product-main-img:hover .bag-logo-on-bag {
+  transform:scale(1.05);
+  filter:drop-shadow(0 6px 28px rgba(201,168,76,.8))
+         drop-shadow(0 0 60px rgba(201,168,76,.35));
+}
+
+.bag-brand-overlay {
+  display:flex; flex-direction:column; align-items:center; gap:4px;
+  text-align:center;
+}
+.bag-brand-name-text {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(14px,3.5vw,22px);
+  font-weight:900;
+  letter-spacing:4px;
+  color:var(--gold);
+  text-shadow:0 2px 12px rgba(201,168,76,.5);
+}
+.bag-brand-sub-text {
+  font-size:clamp(7px,1.5vw,10px);
+  font-weight:600;
+  letter-spacing:3px;
+  color:rgba(201,168,76,.65);
+  text-transform:uppercase;
+}
+.bag-brand-origin-text {
+  font-size:clamp(6px,1.2vw,9px);
+  color:rgba(255,255,255,.35);
+  letter-spacing:1.5px;
+  margin-top:4px;
+  text-transform:uppercase;
+}
+
+/* Badges posición absoluta sobre mockup */
+.product-photo-badges-abs {
+  position:absolute; bottom:16px; left:14px; right:14px;
+  display:flex; gap:7px; flex-wrap:wrap; z-index:3;
+}
+
+/* Thumbnail mini bolsa */
+.thumb-bag-mini {
+  position:relative; width:100%; height:100%;
+}
+.thumb-bag-mini img:first-child {
+  width:100%; height:100%; object-fit:cover;
+  filter:brightness(0.35) saturate(0.2);
+}
+.thumb-logo-mini {
+  position:absolute !important;
+  inset:0; margin:auto;
+  width:55% !important; height:55% !important;
+  object-fit:contain !important;
+  filter:drop-shadow(0 2px 6px rgba(201,168,76,.7)) !important;
 }
 
 .product-thumbnails { display:flex; gap:10px; margin-top:12px; }
