@@ -157,51 +157,24 @@ address { font-style:normal; }
 }
 .logo-og.small { width:36px; height:36px; font-size:12px; }
 
-/* ── Logo imagen real (quita fondo blanco con border-radius) ── */
+/* ── Logo imagen real (fondo ya transparente) ── */
 .nav-logo-img {
   width:44px; height:44px;
-  object-fit:cover;
-  object-position:center;
-  border-radius:50%;           /* recorta el cuadrado blanco → solo el medallón */
+  object-fit:contain;
   flex-shrink:0;
-  box-shadow:0 0 0 2px rgba(201,168,76,.35);
-  transition:transform var(--dur) var(--ease),
-             box-shadow var(--dur) var(--ease);
+  filter:drop-shadow(0 2px 8px rgba(201,168,76,.4));
+  transition:transform var(--dur) var(--ease), filter var(--dur) var(--ease);
 }
 .nav-logo:hover .nav-logo-img {
   transform:rotate(6deg) scale(1.1);
-  box-shadow:0 0 0 3px rgba(201,168,76,.7),
-             0 4px 16px rgba(201,168,76,.4);
+  filter:drop-shadow(0 4px 16px rgba(201,168,76,.7));
 }
 
 .footer-logo-img {
   width:52px; height:52px;
-  object-fit:cover;
-  object-position:center;
-  border-radius:50%;
+  object-fit:contain;
   flex-shrink:0;
-  box-shadow:0 0 0 2px rgba(201,168,76,.3);
-}
-
-/* Hero logo */
-.hero-logo-wrap {
-  margin-bottom:24px;
-  display:inline-block;
-  animation:logoFloat 4s ease-in-out infinite;
-}
-.hero-logo {
-  width:130px; height:130px;
-  object-fit:cover;
-  object-position:center;
-  border-radius:50%;           /* quita fondo blanco */
-  box-shadow:
-    0 0 0 3px rgba(201,168,76,.5),
-    0 0 0 8px rgba(201,168,76,.12),
-    0 12px 40px rgba(201,168,76,.4);
-}
-@keyframes logoFloat {
-  0%,100% { transform:translateY(0) rotate(0deg); }
-  50%      { transform:translateY(-10px) rotate(2deg); }
+  filter:drop-shadow(0 2px 8px rgba(201,168,76,.3));
 }
 .logo-text      { display:flex; flex-direction:column; }
 .logo-main      { color:var(--gold); font-family:'Playfair Display',serif; font-weight:700; font-size:13px; letter-spacing:1.5px; }
@@ -460,17 +433,20 @@ address { font-style:normal; }
 }
 
 .bag-logo-on-bag {
-  width:clamp(100px, 40%, 160px);
+  width:clamp(110px, 45%, 180px);
   height:auto;
   object-fit:contain;
-  filter:drop-shadow(0 4px 20px rgba(201,168,76,.6))
-         drop-shadow(0 0 40px rgba(201,168,76,.25));
+  background:none;
+  border:none;
+  box-shadow:none;
+  filter:drop-shadow(0 6px 24px rgba(201,168,76,.65))
+         drop-shadow(0 0 48px rgba(201,168,76,.3));
   transition:transform .4s var(--ease), filter .4s var(--ease);
 }
 .product-main-img:hover .bag-logo-on-bag {
-  transform:scale(1.05);
-  filter:drop-shadow(0 6px 28px rgba(201,168,76,.8))
-         drop-shadow(0 0 60px rgba(201,168,76,.35));
+  transform:scale(1.06);
+  filter:drop-shadow(0 8px 32px rgba(201,168,76,.9))
+         drop-shadow(0 0 64px rgba(201,168,76,.4));
 }
 
 .bag-brand-overlay {
@@ -517,9 +493,11 @@ address { font-style:normal; }
 .thumb-logo-mini {
   position:absolute !important;
   inset:0; margin:auto;
-  width:55% !important; height:55% !important;
+  width:60% !important; height:60% !important;
   object-fit:contain !important;
-  filter:drop-shadow(0 2px 6px rgba(201,168,76,.7)) !important;
+  background:none !important;
+  box-shadow:none !important;
+  filter:drop-shadow(0 2px 8px rgba(201,168,76,.8)) !important;
 }
 
 .product-thumbnails { display:flex; gap:10px; margin-top:12px; }
