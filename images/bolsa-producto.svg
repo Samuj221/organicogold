@@ -1,0 +1,398 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" width="500" height="700">
+  <defs>
+    <!-- Gradientes bolsa -->
+    <linearGradient id="bagBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0A0A0A"/>
+      <stop offset="18%"  stop-color="#1A1209"/>
+      <stop offset="50%"  stop-color="#121212"/>
+      <stop offset="82%"  stop-color="#1A1209"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="bagSide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#050505"/>
+      <stop offset="100%" stop-color="#151008"/>
+    </linearGradient>
+    <linearGradient id="bagTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#2A1E10"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#F0D060"/>
+      <stop offset="35%"  stop-color="#C9A84C"/>
+      <stop offset="65%"  stop-color="#E8C96D"/>
+      <stop offset="100%" stop-color="#A07830"/>
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#E8C96D"/>
+      <stop offset="50%"  stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#8B6020"/>
+    </linearGradient>
+    <linearGradient id="valveBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="labelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="rgba(201,168,76,0.08)"/>
+      <stop offset="100%" stop-color="rgba(201,168,76,0.02)"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="30%" cy="20%" r="60%">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.06)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+    <filter id="softShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="rgba(0,0,0,0.7)"/>
+    </filter>
+    <filter id="goldGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="bagClip">
+      <path d="M 70 110 Q 68 108 68 106 L 80 50 L 420 50 L 432 106 Q 432 108 430 110 L 440 640 Q 440 660 420 665 L 80 665 Q 60 660 60 640 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- SOMBRA EXTERIOR -->
+  <ellipse cx="250" cy="660" rx="180" ry="18" fill="rgba(0,0,0,0.45)" filter="url(#softShadow)"/>
+
+  <!-- ══ CUERPO BOLSA ══ -->
+  <!-- Cuerpo principal -->
+  <path d="M 70 110 L 60 640 Q 60 665 80 668 L 420 668 Q 440 665 440 640 L 430 110 Z"
+        fill="url(#bagBody)"/>
+
+  <!-- Lados oscuros (profundidad) -->
+  <path d="M 70 110 L 60 640 Q 60 665 80 668 L 100 665 L 92 108 Z"
+        fill="url(#bagSide)" opacity="0.8"/>
+  <path d="M 430 110 L 440 640 Q 440 665 420 668 L 400 665 L 408 108 Z"
+        fill="url(#bagSide)" opacity="0.8"/>
+
+  <!-- Brillo superficie -->
+  <path d="M 70 110 L 60 640 Q 60 665 80 668 L 420 668 Q 440 665 440 640 L 430 110 Z"
+        fill="url(#sheen)"/>
+
+  <!-- Líneas de textura sutil -->
+  <path d="M 80 120 L 75 650" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+  <path d="M 420 120 L 425 650" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+
+  <!-- ══ CREMALLERA / TOP SEAL ══ -->
+  <!-- Fuelle superior -->
+  <path d="M 80 50 L 420 50 L 430 108 L 70 108 Z" fill="url(#bagTop)"/>
+
+  <!-- Dientes cremallera -->
+  <rect x="90" y="68" width="320" height="8" rx="4" fill="#222" stroke="#333" stroke-width="0.5"/>
+  <rect x="90" y="78" width="320" height="6" rx="3" fill="#333" stroke="#444" stroke-width="0.5"/>
+  <!-- Dientes individuales -->
+  <g fill="#1a1a1a" stroke="#555" stroke-width="0.3">
+    <rect x="95"  y="69" width="5" height="6" rx="1"/>
+    <rect x="105" y="69" width="5" height="6" rx="1"/>
+    <rect x="115" y="69" width="5" height="6" rx="1"/>
+    <rect x="125" y="69" width="5" height="6" rx="1"/>
+    <rect x="135" y="69" width="5" height="6" rx="1"/>
+    <rect x="145" y="69" width="5" height="6" rx="1"/>
+    <rect x="155" y="69" width="5" height="6" rx="1"/>
+    <rect x="165" y="69" width="5" height="6" rx="1"/>
+    <rect x="175" y="69" width="5" height="6" rx="1"/>
+    <rect x="185" y="69" width="5" height="6" rx="1"/>
+    <rect x="195" y="69" width="5" height="6" rx="1"/>
+    <rect x="205" y="69" width="5" height="6" rx="1"/>
+    <rect x="215" y="69" width="5" height="6" rx="1"/>
+    <rect x="225" y="69" width="5" height="6" rx="1"/>
+    <rect x="235" y="69" width="5" height="6" rx="1"/>
+    <rect x="245" y="69" width="5" height="6" rx="1"/>
+    <rect x="255" y="69" width="5" height="6" rx="1"/>
+    <rect x="265" y="69" width="5" height="6" rx="1"/>
+    <rect x="275" y="69" width="5" height="6" rx="1"/>
+    <rect x="285" y="69" width="5" height="6" rx="1"/>
+    <rect x="295" y="69" width="5" height="6" rx="1"/>
+    <rect x="305" y="69" width="5" height="6" rx="1"/>
+    <rect x="315" y="69" width="5" height="6" rx="1"/>
+    <rect x="325" y="69" width="5" height="6" rx="1"/>
+    <rect x="335" y="69" width="5" height="6" rx="1"/>
+    <rect x="345" y="69" width="5" height="6" rx="1"/>
+    <rect x="355" y="69" width="5" height="6" rx="1"/>
+    <rect x="365" y="69" width="5" height="6" rx="1"/>
+    <rect x="375" y="69" width="5" height="6" rx="1"/>
+    <rect x="385" y="69" width="5" height="6" rx="1"/>
+    <rect x="395" y="69" width="5" height="6" rx="1"/>
+  </g>
+
+  <!-- Pliegue top fuelle -->
+  <path d="M 130 50 L 125 108" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+  <path d="M 250 50 L 248 108" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+  <path d="M 370 50 L 375 108" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+
+  <!-- ══ VÁLVULA DESGASIFICADORA ══ -->
+  <circle cx="370" cy="175" r="14" fill="url(#valveBg)" stroke="#333" stroke-width="1.5"/>
+  <circle cx="370" cy="175" r="10" fill="#1a1a1a" stroke="#444" stroke-width="1"/>
+  <circle cx="370" cy="175" r="5"  fill="#222" stroke="#555" stroke-width="0.8"/>
+  <circle cx="370" cy="175" r="2"  fill="#333"/>
+  <!-- Marcas radiales válvula -->
+  <g stroke="#444" stroke-width="0.8">
+    <line x1="370" y1="163" x2="370" y2="160"/>
+    <line x1="370" y1="187" x2="370" y2="190"/>
+    <line x1="358" y1="175" x2="356" y2="175"/>
+    <line x1="382" y1="175" x2="384" y2="175"/>
+  </g>
+
+  <!-- ══ ÁREA ETIQUETA CENTRAL ══ -->
+  <rect x="88" y="130" width="324" height="480" rx="8"
+        fill="url(#labelGrad)" stroke="rgba(201,168,76,0.15)" stroke-width="1"/>
+
+  <!-- Línea separadora superior sutil -->
+  <line x1="100" y1="140" x2="400" y2="140"
+        stroke="rgba(201,168,76,0.1)" stroke-width="0.8"/>
+
+  <!-- ══ MEDALLÓN LOGO (SVG inline del logo) ══ -->
+  <!-- Marco exterior del medallón -->
+  <ellipse cx="250" cy="295" rx="118" ry="126"
+           fill="none" stroke="url(#goldGrad)" stroke-width="3" opacity="0.9"/>
+  <ellipse cx="250" cy="295" rx="113" ry="120"
+           fill="rgba(201,168,76,0.06)" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Fondo medallón con brillo dorado suave -->
+  <ellipse cx="250" cy="295" rx="110" ry="116" fill="rgba(201,168,76,0.08)"/>
+
+  <!-- Patrón diagonal fondo (textura) -->
+  <g clip-path="url(#medalClip)" opacity="0.12">
+    <defs>
+      <clipPath id="medalClip">
+        <ellipse cx="250" cy="295" rx="110" ry="116"/>
+      </clipPath>
+    </defs>
+    <g stroke="url(#goldGrad)" stroke-width="1">
+      <line x1="140" y1="180" x2="360" y2="400"/>
+      <line x1="155" y1="180" x2="375" y2="400"/>
+      <line x1="170" y1="180" x2="360" y2="390"/>
+      <line x1="125" y1="195" x2="345" y2="415"/>
+      <line x1="110" y1="210" x2="330" y2="430"/>
+      <line x1="140" y1="165" x2="290" y2="415"/>
+      <line x1="155" y1="165" x2="305" y2="415"/>
+    </g>
+  </g>
+
+  <!-- Símbolo azteca / glifo superior -->
+  <g fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.85" filter="url(#goldGlow)">
+    <!-- Glifo circular superior -->
+    <circle cx="250" cy="197" r="14" fill="rgba(201,168,76,0.15)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <circle cx="250" cy="197" r="9"  fill="none" stroke="url(#goldGrad2)" stroke-width="1"/>
+    <path d="M 250 188 C 252 191 256 193 256 197 C 256 203 252 205 250 208 C 248 205 244 203 244 197 C 244 193 248 191 250 188 Z"
+          fill="rgba(201,168,76,0.3)" stroke="url(#goldGrad)" stroke-width="0.8"/>
+    <!-- Espirales decorativas aztecas -->
+    <path d="M 243 190 Q 239 193 240 197 Q 241 200 244 201" stroke="url(#goldGrad)" stroke-width="0.8" fill="none"/>
+    <path d="M 257 190 Q 261 193 260 197 Q 259 200 256 201" stroke="url(#goldGrad)" stroke-width="0.8" fill="none"/>
+  </g>
+
+  <!-- Hojas y ramas del cafeto -->
+  <g fill="none" stroke="url(#goldGrad)" stroke-width="1.8" opacity="0.9" filter="url(#goldGlow)">
+    <!-- Rama central -->
+    <line x1="250" y1="218" x2="250" y2="310" stroke="url(#goldGrad)" stroke-width="2.2"/>
+
+    <!-- Hojas izquierda superior -->
+    <path d="M 250 230 C 228 222 215 228 212 238 C 210 246 220 252 235 248 C 244 245 250 238 250 230 Z"
+          fill="rgba(201,168,76,0.18)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <line x1="250" y1="230" x2="222" y2="243" stroke="url(#goldGrad2)" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Hojas derecha superior -->
+    <path d="M 250 228 C 272 220 285 226 288 236 C 290 244 280 250 265 246 C 256 243 250 236 250 228 Z"
+          fill="rgba(201,168,76,0.18)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <line x1="250" y1="228" x2="278" y2="241" stroke="url(#goldGrad2)" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Hojas izquierda media -->
+    <path d="M 250 252 C 224 242 208 250 206 262 C 204 272 216 279 233 274 C 244 270 250 261 250 252 Z"
+          fill="rgba(201,168,76,0.18)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <line x1="250" y1="252" x2="217" y2="267" stroke="url(#goldGrad2)" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Hojas derecha media -->
+    <path d="M 250 250 C 276 240 292 248 294 260 C 296 270 284 277 267 272 C 256 268 250 259 250 250 Z"
+          fill="rgba(201,168,76,0.18)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <line x1="250" y1="250" x2="283" y2="265" stroke="url(#goldGrad2)" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Hojas bajas izquierda -->
+    <path d="M 248 275 C 222 268 210 276 210 287 C 210 296 224 301 240 297 C 248 294 250 285 248 275 Z"
+          fill="rgba(201,168,76,0.15)" stroke="url(#goldGrad)" stroke-width="1.4"/>
+
+    <!-- Hojas bajas derecha -->
+    <path d="M 252 273 C 278 266 290 274 290 285 C 290 294 276 299 260 295 C 252 292 250 283 252 273 Z"
+          fill="rgba(201,168,76,0.15)" stroke="url(#goldGrad)" stroke-width="1.4"/>
+  </g>
+
+  <!-- Cerezas de café (frutos) -->
+  <g filter="url(#goldGlow)">
+    <!-- Cerezas grupo izquierda superior -->
+    <circle cx="220" cy="235" r="6.5" fill="#8B3030" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="212" cy="244" r="6"   fill="#A03535" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="226" cy="246" r="6"   fill="#8B3030" stroke="#C9A84C" stroke-width="1"/>
+    <!-- Brillos cerezas -->
+    <circle cx="222" cy="232" r="2" fill="rgba(255,180,180,0.4)"/>
+    <circle cx="214" cy="241" r="1.8" fill="rgba(255,180,180,0.4)"/>
+
+    <!-- Cerezas grupo derecha superior -->
+    <circle cx="280" cy="233" r="6.5" fill="#8B3030" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="288" cy="242" r="6"   fill="#A03535" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="274" cy="244" r="6"   fill="#8B3030" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="282" cy="230" r="2" fill="rgba(255,180,180,0.4)"/>
+
+    <!-- Cerezas centro inferior -->
+    <circle cx="244" cy="295" r="6"   fill="#8B3030" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="256" cy="295" r="6"   fill="#A03535" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="250" cy="303" r="5.5" fill="#8B3030" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="246" cy="292" r="1.8" fill="rgba(255,180,180,0.35)"/>
+
+    <!-- Cerezas izquierda media -->
+    <circle cx="214" cy="262" r="5.5" fill="#8B3030" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="222" cy="270" r="5"   fill="#A03535" stroke="#C9A84C" stroke-width="1"/>
+
+    <!-- Cerezas derecha media -->
+    <circle cx="286" cy="260" r="5.5" fill="#8B3030" stroke="#C9A84C" stroke-width="1"/>
+    <circle cx="278" cy="268" r="5"   fill="#A03535" stroke="#C9A84C" stroke-width="1"/>
+  </g>
+
+  <!-- Iconos climatológicos pequeños (lluvia, sol) estilo azteca -->
+  <g opacity="0.45" fill="none" stroke="url(#goldGrad)" stroke-width="1">
+    <!-- Lluvia izq -->
+    <circle cx="158" cy="268" r="8" fill="rgba(201,168,76,0.1)"/>
+    <path d="M 154 265 Q 156 262 158 265 Q 160 262 162 265" stroke="url(#goldGrad)" stroke-width="1" fill="none"/>
+    <line x1="156" y1="267" x2="155" y2="272"/>
+    <line x1="158" y1="268" x2="157" y2="273"/>
+    <line x1="160" y1="267" x2="159" y2="272"/>
+    <!-- Sol der -->
+    <circle cx="342" cy="268" r="8" fill="rgba(201,168,76,0.1)"/>
+    <circle cx="342" cy="268" r="4" fill="rgba(201,168,76,0.2)"/>
+    <line x1="342" y1="258" x2="342" y2="256"/>
+    <line x1="342" y1="278" x2="342" y2="280"/>
+    <line x1="332" y1="268" x2="330" y2="268"/>
+    <line x1="352" y1="268" x2="354" y2="268"/>
+  </g>
+
+  <!-- ══ BANDA INFERIOR MEDALLÓN (nombre de marca) ══ -->
+  <!-- Fondo banda -->
+  <path d="M 148 313 L 352 313 L 360 390 L 140 390 Z"
+        fill="rgba(201,168,76,0.12)" stroke="url(#goldGrad)" stroke-width="1.5"/>
+
+  <!-- Línea divisoria medallón -->
+  <line x1="148" y1="313" x2="352" y2="313"
+        stroke="url(#goldGrad)" stroke-width="1.8" opacity="0.9"/>
+
+  <!-- ORGANICO -->
+  <text x="250" y="344" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="32" font-weight="bold" letter-spacing="4"
+        fill="url(#goldGrad)" filter="url(#textGlow)">ORGANICO</text>
+
+  <!-- Decoraciones tipo flourish -->
+  <g stroke="url(#goldGrad)" stroke-width="1.2" fill="none" opacity="0.8">
+    <path d="M 162 350 Q 168 347 172 350 Q 168 353 162 350 Z" fill="url(#goldGrad)"/>
+    <path d="M 338 350 Q 332 347 328 350 Q 332 353 338 350 Z" fill="url(#goldGrad)"/>
+    <line x1="175" y1="350" x2="185" y2="350"/>
+    <line x1="315" y1="350" x2="325" y2="350"/>
+  </g>
+
+  <!-- GOLD -->
+  <text x="250" y="375" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="30" font-weight="bold" letter-spacing="6"
+        fill="url(#goldGrad)" filter="url(#textGlow)">· GOLD ·</text>
+
+  <!-- ══ TEXTOS SECUNDARIOS ══ -->
+  <!-- ANCIENT ORIGINS -->
+  <text x="250" y="415" text-anchor="middle"
+        font-family="'Arial', 'Helvetica', sans-serif"
+        font-size="11" font-weight="600" letter-spacing="2.5"
+        fill="url(#goldGrad)" opacity="0.85">ANCIENT ORIGINS</text>
+
+  <!-- SINGLE SOURCE ARABICA -->
+  <text x="250" y="432" text-anchor="middle"
+        font-family="'Arial', 'Helvetica', sans-serif"
+        font-size="11" font-weight="500" letter-spacing="2"
+        fill="url(#goldGrad)" opacity="0.75">SINGLE SOURCE ARABICA</text>
+
+  <!-- Línea decorativa -->
+  <line x1="130" y1="440" x2="370" y2="440"
+        stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- EST. 2021 en caja -->
+  <rect x="200" y="448" width="100" height="20" rx="3"
+        fill="rgba(201,168,76,0.1)" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.7"/>
+  <text x="250" y="462" text-anchor="middle"
+        font-family="'Arial', 'Helvetica', sans-serif"
+        font-size="10" font-weight="600" letter-spacing="2"
+        fill="url(#goldGrad)" opacity="0.8">EST. 2021</text>
+
+  <!-- BOLD & SUSTAINABLE en caja tipo cinta -->
+  <path d="M 130 476 L 150 470 L 350 470 L 370 476 L 350 482 L 150 482 Z"
+        fill="rgba(201,168,76,0.12)" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.7"/>
+  <text x="250" y="480" text-anchor="middle"
+        font-family="'Arial', 'Helvetica', sans-serif"
+        font-size="9" font-weight="700" letter-spacing="2.5"
+        fill="url(#goldGrad)" opacity="0.85">BOLD &amp; SUSTAINABLE</text>
+
+  <!-- ══ INFO INFERIOR ══ -->
+  <line x1="100" y1="508" x2="400" y2="508"
+        stroke="rgba(201,168,76,0.15)" stroke-width="0.8"/>
+
+  <!-- Origen -->
+  <text x="250" y="528" text-anchor="middle"
+        font-family="'Arial', 'Helvetica', sans-serif"
+        font-size="10" fill="rgba(201,168,76,0.6)" letter-spacing="1">
+    VEREDA EL PALBARCITO · GUADUAS, CUNDINAMARCA
+  </text>
+
+  <!-- Iconos info pequeños -->
+  <g font-family="'Arial', sans-serif" font-size="9" fill="rgba(201,168,76,0.5)" text-anchor="middle">
+    <text x="145" y="548">🌿 ORGÁNICO</text>
+    <text x="250" y="548">🏔 1.800 m.s.n.m.</text>
+    <text x="355" y="548">🤲 COSECHA MANUAL</text>
+  </g>
+
+  <!-- Peso neto -->
+  <line x1="100" y1="558" x2="400" y2="558"
+        stroke="rgba(201,168,76,0.1)" stroke-width="0.6"/>
+  <text x="250" y="574" text-anchor="middle"
+        font-family="'Arial', 'Helvetica', sans-serif"
+        font-size="10" fill="rgba(201,168,76,0.4)" letter-spacing="1.5">
+    CONTENIDO NETO: 500 g
+  </text>
+
+  <!-- Código de barras decorativo -->
+  <g fill="rgba(201,168,76,0.25)" transform="translate(195, 585)">
+    <rect x="0"   y="0" width="2"  height="18"/>
+    <rect x="4"   y="0" width="1"  height="18"/>
+    <rect x="7"   y="0" width="3"  height="18"/>
+    <rect x="12"  y="0" width="1"  height="18"/>
+    <rect x="15"  y="0" width="2"  height="18"/>
+    <rect x="19"  y="0" width="4"  height="18"/>
+    <rect x="25"  y="0" width="1"  height="18"/>
+    <rect x="28"  y="0" width="2"  height="18"/>
+    <rect x="32"  y="0" width="1"  height="18"/>
+    <rect x="35"  y="0" width="3"  height="18"/>
+    <rect x="40"  y="0" width="1"  height="18"/>
+    <rect x="43"  y="0" width="2"  height="18"/>
+    <rect x="47"  y="0" width="1"  height="18"/>
+    <rect x="50"  y="0" width="4"  height="18"/>
+    <rect x="56"  y="0" width="1"  height="18"/>
+    <rect x="59"  y="0" width="2"  height="18"/>
+    <rect x="63"  y="0" width="3"  height="18"/>
+    <rect x="68"  y="0" width="1"  height="18"/>
+    <rect x="71"  y="0" width="2"  height="18"/>
+    <rect x="75"  y="0" width="1"  height="18"/>
+    <rect x="78"  y="0" width="4"  height="18"/>
+    <rect x="84"  y="0" width="1"  height="18"/>
+    <rect x="87"  y="0" width="2"  height="18"/>
+    <rect x="91"  y="0" width="1"  height="18"/>
+    <rect x="94"  y="0" width="3"  height="18"/>
+    <rect x="99"  y="0" width="1"  height="18"/>
+    <rect x="102" y="0" width="2"  height="18"/>
+    <rect x="106" y="0" width="3"  height="18"/>
+    <rect x="111" y="0" width="1"  height="18"/>
+  </g>
+  <text x="250" y="614" text-anchor="middle"
+        font-family="'Arial', sans-serif" font-size="8"
+        fill="rgba(201,168,76,0.3)">7 709998 000001</text>
+
+  <!-- Reflejo inferior en bolsa -->
+  <ellipse cx="250" cy="650" rx="160" ry="12"
+           fill="rgba(201,168,76,0.04)"/>
+</svg>

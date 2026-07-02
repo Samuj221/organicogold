@@ -16,7 +16,7 @@ const CONFIG = Object.freeze({
   STOCK_INIT: 47,
   STORAGE_KEY:'og_cart_v2',
   IMAGES: [
-    'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&q=80',
+    'images/bolsa-producto.svg',
     'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80',
     'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80',
     'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80',
