@@ -11,8 +11,8 @@
 const CONFIG = Object.freeze({
   WA_NUMBER:  '573000000000',           // ← cambia a tu número real
   WA_MSG:     'Hola! Quiero pedir café Organico Gold ☕',
-  FREE_SHIP:  80000,                    // monto mínimo envío gratis Bogotá
-  SHIP_COSTS: { bogota: 8000, other: 14000, free: 0 },
+  FREE_SHIP:  0,                         // envío gratis en todos los pedidos (promo Mundial)
+  SHIP_COSTS: { bogota: 0, other: 14000, free: 0 },
   STOCK_INIT: 47,
   STORAGE_KEY:'og_cart_v2',
   IMAGES: [
@@ -22,9 +22,9 @@ const CONFIG = Object.freeze({
     'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80',
   ],
   PRICE_MAP: {
-    '250g': { price:35000, original:43000 },
-    '500g': { price:65000, original:80000 },
-    '1kg':  { price:120000, original:148000 },
+    '250g': { price:35000, original:42000 },
+    '500g': { price:65000, original:75000 },
+    '1kg':  { price:120000, original:140000 },
   },
 });
 
