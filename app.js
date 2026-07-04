@@ -119,7 +119,9 @@ const Product = (() => {
     };
   }
 
-  return { selectGrind, selectSize, selectView, changeQty, snapshot };
+  function currentSize() { return state.size; }
+
+  return { selectGrind, selectSize, selectView, changeQty, snapshot, currentSize };
 })();
 
 /* ══════════════════════════════════════════
@@ -144,6 +146,12 @@ const Cart = (() => {
   function add() {
     const item = Product.snapshot();
     if (item.qty < 1 || item.qty > 20) return;
+
+    // Verificar stock real antes de agregar
+    if (Stock.getQty(Product.currentSize()) === 0) {
+      UI.toast('⚠️ Este tamaño está agotado por el momento');
+      return;
+    }
 
     const existing = items.find(i => i.id === item.id);
     if (existing) {
@@ -543,24 +551,82 @@ const UI = (() => {
 })();
 
 /* ══════════════════════════════════════════
-   STOCK COUNTDOWN
+   STOCK — sincronizado con panel admin
 ══════════════════════════════════════════ */
 const Stock = (() => {
-  let count = CONFIG.STOCK_INIT;
+  const STOCK_KEY = 'og_stock_admin';
 
-  function init() {
-    const el = document.getElementById('stockCount');
-    if (!el) return;
-    setInterval(() => {
-      if (Math.random() < 0.12 && count > 8) {
-        count--;
-        el.textContent = count;
-        if (count < 15) el.style.color = '#FF6B5B';
-      }
-    }, 28000);
+  // Stock por defecto si el admin no ha guardado nada aún
+  const DEFAULTS = {
+    '250g': 0,
+    '500g': 60,
+    '1kg' : 0,
+  };
+
+  function _read() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STOCK_KEY) || '{}');
+      const result = {};
+      Object.keys(DEFAULTS).forEach(k => {
+        result[k] = (saved[k] !== undefined) ? (saved[k].current ?? saved[k]) : DEFAULTS[k];
+      });
+      return result;
+    } catch { return { ...DEFAULTS }; }
   }
 
-  return { init };
+  function getQty(size) {
+    return _read()[size] ?? 0;
+  }
+
+  function init() {
+    const stock = _read();
+
+    // Aplicar estado a cada botón de tamaño
+    document.querySelectorAll('#sizeOptions .option-btn[data-size]').forEach(btn => {
+      const size = btn.dataset.size;
+      const qty  = stock[size] ?? 0;
+
+      // Eliminar etiquetas previas
+      btn.querySelectorAll('.stock-label, .stock-available').forEach(el => el.remove());
+
+      if (qty === 0) {
+        btn.disabled = true;
+        btn.classList.add('out-of-stock');
+        btn.classList.remove('active');
+        const tag = document.createElement('span');
+        tag.className = 'stock-label';
+        tag.textContent = 'Agotado';
+        btn.appendChild(tag);
+      } else {
+        btn.disabled = false;
+        btn.classList.remove('out-of-stock');
+        const tag = document.createElement('span');
+        tag.className = 'stock-available';
+        tag.textContent = qty + ' disp.';
+        btn.appendChild(tag);
+      }
+    });
+
+    // Si el tamaño activo está agotado, pasar al primero disponible
+    const activeBtn = document.querySelector('#sizeOptions .option-btn.active');
+    if (!activeBtn || activeBtn.disabled) {
+      const firstAvail = document.querySelector('#sizeOptions .option-btn[data-size]:not([disabled])');
+      if (firstAvail) {
+        const size = firstAvail.dataset.size;
+        Product.selectSize(firstAvail, size, CONFIG.PRICE_MAP[size].price);
+      }
+    }
+
+    // Actualizar el contador de stock visible en la página
+    const countEl = document.getElementById('stockCount');
+    if (countEl) {
+      const total = Object.values(stock).reduce((s, v) => s + (v || 0), 0);
+      countEl.textContent = total;
+      if (total < 15) countEl.style.color = '#FF6B5B';
+    }
+  }
+
+  return { init, getQty };
 })();
 
 /* ══════════════════════════════════════════
@@ -569,4 +635,9 @@ const Stock = (() => {
 document.addEventListener('DOMContentLoaded', () => {
   UI.init();
   Stock.init();
+});
+
+// Re-aplicar stock si el admin cambia valores desde otra pestaña
+window.addEventListener('storage', e => {
+  if (e.key === 'og_stock_admin') Stock.init();
 });
