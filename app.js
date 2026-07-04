@@ -409,6 +409,23 @@ const Checkout = (() => {
 
     setTimeout(() => {
       close();
+
+      // Guardar pedido en localStorage para panel admin
+      try {
+        const savedOrders = JSON.parse(localStorage.getItem('og_orders_v1') || '[]');
+        savedOrders.unshift({
+          id:       'ORD-' + Date.now(),
+          date:     new Date().toISOString(),
+          customer: { name, phone, email, city, address, notes },
+          items:    Cart.getAll(),
+          shipping: shippingCost,
+          total,
+          payment:  pmNames[pm] ?? pm,
+          status:   'nuevo',
+        });
+        localStorage.setItem('og_orders_v1', JSON.stringify(savedOrders.slice(0, 500)));
+      } catch(_e) { /* quota: silent */ }
+
       window.open(`https://wa.me/${CONFIG.WA_NUMBER}?text=${Sanitize.wa(waText)}`, '_blank', 'noopener,noreferrer');
 
       const successModal = document.getElementById('successModal');
